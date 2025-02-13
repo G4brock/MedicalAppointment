@@ -12,7 +12,7 @@ from django.contrib import messages
 
 from .forms import CreateUserForm,Bookingform
   
-from .models import *
+from .models import Booking, Doctor, Department
 
 from django.core.mail import send_mail
 from django.conf import settings
