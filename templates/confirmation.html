@@ -68,10 +68,21 @@
   <nav class="p-1 pb-2 sticky-top w-100">
     <div class="bg-opacity">
       <span class="navbar-toggler-icon my-auto d-flex align-content-center">
-        <a class="p-6 ml-6  listcontact" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-          <i class="text-white ml-2 fs-3 fa-sharp fa-solid fa-bars"></i>
-        </a>
+          <button class="p-6 ml-6 listcontact" data-bs-toggle="offcanvas" href="#offcanvasExample"
+             role="button" aria-controls="offcanvasExample" tabindex="0"
+             onkeydown="handleKeyDown(event)">
+              Open Offcanvas
+          </button>
       </span>
+  </div>
+  
+  <script>
+  function handleKeyDown(event) {
+      if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();  
+      }
+  }
+  </script>
       <h1 class="text-white fw-bold text-center my-auto fs-2">Medical</h1>
     </div>
     <div class="offcanvas offcanvas-start offcanvas-mobile offcanvas-laptop" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
