@@ -66,9 +66,23 @@
 </head>
 <body>
   <nav class="p-1 pb-2 sticky-top w-100">
-    <div class="bg-opacity" onClick="doSomething();">
+    <div class="bg-opacity">
       <span class="navbar-toggler-icon my-auto d-flex align-content-center">
-        <a class="p-6 ml-6  listcontact" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+          <a class="p-6 ml-6 listcontact" data-bs-toggle="offcanvas" href="#offcanvasExample"
+             role="button" aria-controls="offcanvasExample" tabindex="0"
+             onkeydown="handleKeyDown(event)">
+              Open Offcanvas
+          </a>
+      </span>
+  </div>
+  
+  <script>
+  function handleKeyDown(event) {
+      if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();  
+      }
+  }
+  </script>
           <i class="text-white ml-2 fs-3 fa-sharp fa-solid fa-bars"></i>
         </a>
       </span>
