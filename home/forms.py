@@ -28,11 +28,10 @@ class DateInput(forms.DateInput):
 class TimeInput(forms.TimeInput):
   input_type = 'time'
     
-class Bookingform(forms.ModelForm):
-  class Meta:
-    model = Booking
-   
-    exclude = ['user']
+class MyForm(forms.ModelForm):
+    class Meta:
+        model = Booking
+        fields = ['field1', 'field2', 'field3']
     
     widgets = {
       'booking_date' : DateInput(attrs={'min': datetime.date.today() ,}),
